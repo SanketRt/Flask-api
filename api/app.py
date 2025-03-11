@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-import vercel_wsgi  
 
 app = Flask(__name__)
 
@@ -95,5 +94,3 @@ def calculate():
         })
         response.status_code = 418
         return response
-
-handler = vercel_wsgi.handler(app)
